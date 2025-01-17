@@ -35,7 +35,7 @@ const languages: Language[] = [
   },
   {
     icon: "html-logo.svg",
-    name: "html",
+    name: "HTML",
   },
 ];
 export default function ProgrammingLanguages() {

@@ -7,7 +7,9 @@ export default function Tech({ icon, name }: Language) {
         src={`icons/${icon}`}
         className="size-8 filter grayscale group-hover:grayscale-0 group-hover:-translate-y-1 transition-all"
       />
-      <span>{name}</span>
+      <span className="text-xs text-white/70 group-hover:text-white transition-colors">
+        {name}
+      </span>
     </div>
   );
 }
