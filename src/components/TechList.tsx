@@ -9,6 +9,7 @@ export default function TechList({ list }: { list: TechIcon[] }) {
           key={index + Math.random() * 100}
           icon={list.icon}
           name={list.name}
+          hoverText={list.hoverText}
         />
       ))}
     </>

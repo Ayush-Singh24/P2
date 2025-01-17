@@ -32,6 +32,7 @@ export const languages: TechIcon[] = [
   {
     icon: "html-logo.svg",
     name: "HTML",
+    hoverText: "Imposter 🤫",
   },
 ];
 
@@ -47,6 +48,7 @@ export const frameworks: TechIcon[] = [
   {
     icon: "node-logo.svg",
     name: "Node.js",
+    hoverText: "I know it's a JS runtime env 😭",
   },
   {
     icon: "express-logo.svg",
@@ -82,6 +84,7 @@ export const tools: TechIcon[] = [
   {
     icon: "neovim-logo.svg",
     name: "Neovim",
+    hoverText: "I use neovim btw! 😎",
   },
   {
     icon: "supabase-logo.svg",
