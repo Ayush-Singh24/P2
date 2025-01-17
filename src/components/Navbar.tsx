@@ -1,6 +1,12 @@
 import { Button } from "./ui/button";
 
 export default function Navbar() {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <nav className="scroll-pr-6 flex justify-between items-center">
       <a>
@@ -13,7 +19,11 @@ export default function Navbar() {
         <Button variant="ghost" className="rounded-xl hover:bg-secondary/60">
           resume
         </Button>
-        <Button variant="ghost" className="rounded-xl hover:bg-secondary/60">
+        <Button
+          onClick={() => scrollToSection("experience")}
+          variant="ghost"
+          className="rounded-xl hover:bg-secondary/60"
+        >
           exp
         </Button>
         <Button variant="ghost" className="rounded-xl hover:bg-secondary/60">
