@@ -71,7 +71,7 @@ export default function About() {
         </div>
       </div>
       <p>
-        Full-stack developer, passionate about crafting scalable, efficient, and
+        Full-stack developer, focused on crafting scalable, efficient, and
         secure applications that deliver seamless user experiences.
       </p>
       <div className="space-y-4">
