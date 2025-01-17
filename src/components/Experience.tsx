@@ -1,11 +1,11 @@
-import { Experiences } from "@/utils/constants";
+import { experiences } from "@/utils/constants";
 
 export default function Experience() {
   return (
     <section className="flex flex-col gap-5">
       <h1 className="text-2xl font-medium">Experience</h1>
       <ol className="relative border-s border-white/20">
-        {Experiences.map(({ timePeriod, company, role, description }) => {
+        {experiences.map(({ timePeriod, company, role, description }) => {
           return (
             <li className="mb-10 ms-4 last:mb-0">
               <div className="absolute w-3 h-3 bg-white rounded-full mt-3 -start-1.5 border border-white" />

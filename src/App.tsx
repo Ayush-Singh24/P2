@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About";
+import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Navbar from "./components/Navbar";
 import { ShootingStars } from "./components/ui/shooting-stars";
@@ -16,6 +17,7 @@ function App() {
         <Navbar />
         <About />
         <Experience />
+        <Education />
       </main>
     </>
   );

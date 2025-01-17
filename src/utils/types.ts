@@ -10,3 +10,11 @@ export type ExpType = {
   timePeriod: string;
   description: string;
 };
+
+export type EduType = {
+  degree: string;
+  institute: string;
+  timePeriod: string;
+  cgpa?: number;
+  percentage?: number;
+};
