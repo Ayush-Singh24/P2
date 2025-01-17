@@ -2,10 +2,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { AnimatePresence, motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { useState } from "react";
-import Tech from "./ui/tech";
-import ProgrammingLanguages from "./ProgrammingLanguages";
+import TechList from "./TechList";
+import { frameworks, languages, tools } from "@/utils/constants";
+
+const tabs = [
+  {
+    id: "languages",
+    label: "Languages",
+    component: <TechList list={languages} />,
+  },
+  {
+    id: "frameworks",
+    label: "Frameworks",
+    component: <TechList list={frameworks} />,
+  },
+  { id: "tools", label: "Tools", component: <TechList list={tools} /> },
+];
 export default function About() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [activeTab, setActiveTab] = useState("languages");
   const handleEmailClick = () => {
     window.location.href = "mailto:asayushsingh80@gmail.com";
   };
@@ -56,8 +71,42 @@ export default function About() {
         Full-stack developer, passionate about crafting scalable, efficient, and
         secure applications that deliver seamless user experiences.
       </p>
-      <div className="relative w-full grid grid-cols-4 gap-2">
-        <ProgrammingLanguages />
+      <div className="space-y-4">
+        <div className="flex gap-4 mb-4">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`relative px-4 py-2 text-sm font-medium transition-colors ${
+                activeTab === tab.id
+                  ? "text-white"
+                  : "text-white/70 hover:text-white/90"
+              }`}
+            >
+              {tab.label}
+              {activeTab === tab.id && (
+                <motion.div
+                  layoutId="activeTab"
+                  className="absolute inset-0 bg-white/10 rounded-md"
+                  initial={false}
+                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                />
+              )}
+            </button>
+          ))}
+        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="grid grid-cols-4 gap-2"
+          >
+            {tabs.find((tab) => tab.id === activeTab)?.component}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

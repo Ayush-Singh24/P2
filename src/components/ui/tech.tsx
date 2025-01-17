@@ -1,6 +1,6 @@
-import { Language } from "../ProgrammingLanguages";
+import { TechIcon } from "@/utils/types";
 
-export default function Tech({ icon, name }: Language) {
+export default function Tech({ icon, name }: TechIcon) {
   return (
     <div className="flex flex-col items-center gap-2 border border-grey px-2 py-3 rounded-xl group hover:bg-muted/40">
       <img
