@@ -8,7 +8,7 @@ function App() {
       <div className="absolute inset-0 sm:block overflow-hidden">
         <BackgroundBoxes />
       </div>
-      <main className="bg-red-500 z-10 max-w-xl mx-auto px-6 mt-6 relative">
+      <main className="z-10 max-w-xl mx-auto px-6 mt-6 relative">
         <Navbar />
         <section>intro</section>
       </main>
