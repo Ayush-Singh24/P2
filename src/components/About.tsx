@@ -28,8 +28,11 @@ export default function About() {
   return (
     <section className="flex flex-col gap-5">
       <div className="flex items-center gap-5">
-        <Avatar className="size-20">
-          <AvatarImage src="/images/ayush.png" className="size-20" />
+        <Avatar className="size-20 border-4 border-white/70 hover:border-green-400 transition-colors">
+          <AvatarImage
+            src="/images/ayush.png"
+            className="size-20 overflow-clip"
+          />
           <AvatarFallback>AS</AvatarFallback>
         </Avatar>
         <div className="text-3xl font-semibold flex flex-col gap-3">
