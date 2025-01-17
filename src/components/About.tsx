@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { useState } from "react";
 import Tech from "./ui/tech";
+import ProgrammingLanguages from "./ProgrammingLanguages";
 export default function About() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const handleEmailClick = () => {
@@ -56,14 +57,7 @@ export default function About() {
         secure applications that deliver seamless user experiences.
       </p>
       <div className="relative w-full grid grid-cols-4 gap-2">
-        <Tech />
-        <Tech />
-        <Tech />
-        <Tech />
-        <Tech />
-        <Tech />
-        <Tech />
-        <Tech />
+        <ProgrammingLanguages />
       </div>
     </section>
   );
