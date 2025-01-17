@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Navbar from "./components/Navbar";
 import { ShootingStars } from "./components/ui/shooting-stars";
 import { StarsBackground } from "./components/ui/stars-background";
@@ -14,6 +15,7 @@ function App() {
       <main className="z-10 max-w-xl mx-auto px-6 mt-6 relative flex flex-col gap-8">
         <Navbar />
         <About />
+        <Experience />
       </main>
     </>
   );

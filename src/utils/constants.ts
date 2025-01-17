@@ -1,4 +1,4 @@
-import { TechIcon } from "./types";
+import { ExpType, TechIcon } from "./types";
 
 export const languages: TechIcon[] = [
   {
@@ -105,5 +105,15 @@ export const tools: TechIcon[] = [
   {
     icon: "vscode-logo.svg",
     name: "VS Code",
+  },
+];
+
+export const Experiences: ExpType[] = [
+  {
+    role: "FrontEnd Intern",
+    company: "The Mangojelly",
+    description:
+      "Assisted in the development and maintenance of the company's website and web applications using React.js, MUI and Redux.",
+    timePeriod: "November 2024 - January 2025",
   },
 ];
