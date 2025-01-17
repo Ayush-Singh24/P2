@@ -19,7 +19,7 @@ function App() {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -80 }}
         transition={{ duration: 0.5 }}
-        className="z-10 max-w-xl mx-auto px-6 mt-6 relative flex flex-col gap-8"
+        className="z-10 max-w-xl mx-auto px-6 mt-6 relative flex flex-col gap-16"
       >
         <Navbar />
         <About />

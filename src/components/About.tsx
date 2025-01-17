@@ -26,7 +26,7 @@ export default function About() {
   };
 
   return (
-    <section className="flex flex-col gap-5">
+    <section id="about" className="flex flex-col gap-5">
       <div className="flex items-center gap-5">
         <Avatar className="size-20 border-4 border-white/70 hover:border-green-400 transition-colors">
           <AvatarImage
@@ -35,8 +35,10 @@ export default function About() {
           />
           <AvatarFallback>AS</AvatarFallback>
         </Avatar>
-        <div className="text-3xl font-semibold flex flex-col gap-3">
-          <div>Hey! I am Ayush.</div>
+        <div className="flex flex-col gap-3">
+          <div className="text-2xl md:text-3xl font-semibold ">
+            Hey! I am Ayush.
+          </div>
           <div
             className="flex items-center gap-2 cursor-pointer w-fit"
             onMouseEnter={() => setIsHovered(true)}
@@ -44,7 +46,7 @@ export default function About() {
             onClick={handleEmailClick}
           >
             <div className="h-2 w-2 rounded-full bg-green-500" />
-            <div className="h-5 w-40 relative overflow-hidden text-sm text-white/70 ">
+            <div className="h-5 w-40 relative overflow-hidden text-sm text-white/70 font-semibold">
               <AnimatePresence>
                 <motion.div
                   className="absolute"

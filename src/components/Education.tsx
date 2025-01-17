@@ -14,10 +14,10 @@ export default function Education() {
                 className="mb-10 ms-4 last:mb-0"
               >
                 <div className="absolute w-3 h-3 bg-white rounded-full mt-3 -start-1.5 border border-white" />
-                <div className="flex justify-between">
+                <div className="flex justify-between flex-col sm:flex-row">
                   <div className="flex flex-col gap-1">
                     <h2
-                      className={`text-xl font-semibold ${getRandomTextColor()}`}
+                      className={`text-md md:text-xl font-semibold ${getRandomTextColor()}`}
                     >
                       {institute}
                     </h2>
@@ -26,7 +26,7 @@ export default function Education() {
                     </h3>
                   </div>
                   <div>
-                    <time className="mb-1 text-sm font-normal leading-none text-white/50">
+                    <time className="mb-1 text-xs sm:text-sm font-normal leading-none text-white/50">
                       {timePeriod}
                     </time>
                   </div>
