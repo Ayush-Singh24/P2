@@ -18,3 +18,9 @@ export type EduType = {
   cgpa?: number;
   percentage?: number;
 };
+
+export type ProjectType = {
+  title: string;
+  img: string;
+  description: string;
+};

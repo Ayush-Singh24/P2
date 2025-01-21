@@ -1,4 +1,4 @@
-import { EduType, ExpType, TechIcon } from "./types";
+import { EduType, ExpType, ProjectType, TechIcon } from "./types";
 
 export const languages: TechIcon[] = [
   {
@@ -185,3 +185,28 @@ export const tailwindTextColors = [
   "text-cyan-600",
   "text-indigo-600",
 ] as const;
+
+export const projects: ProjectType[] = [
+  {
+    title: "Podify",
+    description:
+      "Podify is an innovative podcast app that leverages AI to generate high-quality podcasts and thumbnails. With a user-friendly interface and robust security features, including OAuth authentication, Podify makes it easy to create and manage your podcasts.",
+    img: "podify.png",
+    prodLink: "https://podify-beta.vercel.app",
+    githubLink: "https://github.com/ayush-singh24/podify",
+  },
+  {
+    title: "Codoc",
+    description:
+      "Codoc is a web-based markdown editor designed for seamless collaboration. Bring your team together in real-time to create, edit, and share documents with ease.",
+    img: "codoc.jpeg",
+    prodLink: "https://codoc-beta.vercel.app",
+    githubLink: "https://github.com/ayush-singh24/podify",
+  },
+  {
+    title: "Folderize",
+    description: "Folder manager",
+    img: "folderize.png",
+    githubLink: "https://github.com/ayush-singh24/folderize",
+  },
+];
