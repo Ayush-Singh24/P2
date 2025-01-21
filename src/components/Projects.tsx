@@ -1,15 +1,7 @@
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { projects } from "@/utils/constants";
 import { useState } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Github,
-  Link,
-  Link2,
-  Link2Off,
-} from "lucide-react";
-import { Button } from "./ui/button";
+import { ChevronLeft, ChevronRight, Github, Link } from "lucide-react";
 
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -64,13 +56,13 @@ export default function Projects() {
       <div className="relative flex justify-between items-center">
         <button
           onClick={() => navigate(-1)}
-          className="absolute left-[-3rem] z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="absolute left-[-1rem] sm:left-[-3rem] z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
           aria-label="Previous project"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <div className="flex justify-between w-full">
-          <div className="relative h-72 w-60 bg-white/10">
+        <div className="flex flex-col sm:flex-row justify-between items-center sm:items-stretch w-full gap-3 sm:gap-0 min-h-[480px]">
+          <div className="relative h-72 w-60 bg-white/10 shrink-0">
             <motion.div
               key={key}
               className="absolute inset-0 origin-bottom-left"
@@ -104,7 +96,7 @@ export default function Projects() {
               </div>
             </motion.div>
           </div>
-          <div className="flex flex-col items-start gap-3 w-1/2">
+          <div className="flex flex-col items-start gap-3 sm:w-1/2 min-h-0 h-full">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 className="flex flex-col gap-3"
@@ -122,10 +114,10 @@ export default function Projects() {
                 <motion.h3 className="text-2xl">
                   {projects[currentIndex].title}
                 </motion.h3>
-                <motion.p className="text-sm text-white/70">
+                <motion.p className="text-sm text-white/70 text-wrap">
                   {projects[currentIndex].description}
                 </motion.p>
-                <div className="flex justify-start gap-3 mt-3">
+                <div className="flex justify-start gap-3 mt-auto sm:mt-3">
                   <motion.a
                     href={projects[currentIndex].githubLink}
                     whileHover={{ rotate: [0, 2, -2, 2, -2, 0] }}
@@ -157,7 +149,7 @@ export default function Projects() {
         </div>
         <button
           onClick={() => navigate(1)}
-          className="absolute right-[-3rem] z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="absolute right-[-1rem]  sm:right-[-3rem] z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
           aria-label="Next project"
         >
           <ChevronRight className="w-6 h-6" />
