@@ -23,4 +23,6 @@ export type ProjectType = {
   title: string;
   img: string;
   description: string;
+  githubLink: string;
+  prodLink?: string;
 };
