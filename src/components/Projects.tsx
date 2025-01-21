@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [direction, setDirection] = useState<number>(0);
-  const [key, setKey] = useState(0); // Add this to force re-render
+  const [key, setKey] = useState(0);
 
   const contentVariants: Variants = {
     enter: (direction) => ({
@@ -37,7 +37,7 @@ export default function Projects() {
 
   const navigate = (newDirection: number) => {
     setDirection(newDirection);
-    setKey((prev) => prev + 1); // Add this to force re-render of tilt animation
+    setKey((prev) => prev + 1);
     setCurrentIndex((prev) => {
       const nextIndex = prev + newDirection;
       if (nextIndex < 0) {
@@ -64,14 +64,14 @@ export default function Projects() {
         <div className="flex justify-between w-full">
           <div className="relative h-72 w-60 bg-white/10">
             <motion.div
-              key={key} // Add this to force re-render
+              key={key}
               className="absolute inset-0 origin-bottom-left"
               initial={{ rotate: 0 }}
-              animate={{ rotate: -6 }} // Change this from whileInView to animate
+              whileInView={{ rotate: -6 }}
               transition={{
                 duration: 0.5,
                 ease: "easeOut",
-                delay: 0.3, // Add small delay to sync with image fade
+                rotate: 6,
               }}
               whileHover={{ rotate: 0, transition: { duration: 0.3 } }}
             >
@@ -96,7 +96,7 @@ export default function Projects() {
               </div>
             </motion.div>
           </div>
-          <div className="flex flex-col items-start gap-3 max-w-[50%]">
+          <div className="flex flex-col items-start gap-3 w-1/2">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -107,7 +107,7 @@ export default function Projects() {
                 exit="exit"
                 transition={{
                   x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
+                  opacity: { duration: 0.3 },
                 }}
               >
                 <motion.h3 className="text-2xl mb-3">
