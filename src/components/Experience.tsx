@@ -7,7 +7,7 @@ export default function Experience() {
       <ol className="relative border-s border-white/20">
         {experiences.map(({ timePeriod, company, role, description }) => {
           return (
-            <li className="mb-10 ms-4 last:mb-0">
+            <li className="mb-10 ms-4 last:mb-0" key={company}>
               <div className="absolute w-3 h-3 bg-white rounded-full mt-3 -start-1.5 border border-white" />
               <div className="flex justify-between flex-col sm:flex-row">
                 <div className="flex flex-col gap-1">

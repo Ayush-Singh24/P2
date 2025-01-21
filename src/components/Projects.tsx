@@ -1,7 +1,15 @@
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { projects } from "@/utils/constants";
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Github,
+  Link,
+  Link2,
+  Link2Off,
+} from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -99,6 +107,7 @@ export default function Projects() {
           <div className="flex flex-col items-start gap-3 w-1/2">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
+                className="flex flex-col gap-3"
                 key={currentIndex}
                 custom={direction}
                 variants={contentVariants}
@@ -110,10 +119,38 @@ export default function Projects() {
                   opacity: { duration: 0.3 },
                 }}
               >
-                <motion.h3 className="text-2xl mb-3">
+                <motion.h3 className="text-2xl">
                   {projects[currentIndex].title}
                 </motion.h3>
-                <motion.p>{projects[currentIndex].description}</motion.p>
+                <motion.p className="text-sm text-white/70">
+                  {projects[currentIndex].description}
+                </motion.p>
+                <div className="flex justify-start gap-3 mt-3">
+                  <motion.a
+                    href={projects[currentIndex].githubLink}
+                    whileHover={{ rotate: [0, 2, -2, 2, -2, 0] }}
+                    transition={{
+                      duration: 0.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <Github className="text-primary" />
+                  </motion.a>
+                  {projects[currentIndex].prodLink && (
+                    <motion.a
+                      href={projects[currentIndex].prodLink}
+                      whileHover={{ rotate: [0, 2, -2, 2, -2, 0] }}
+                      transition={{
+                        duration: 0.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    >
+                      <Link className="text-blue-400" />
+                    </motion.a>
+                  )}
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
