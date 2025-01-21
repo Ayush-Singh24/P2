@@ -61,7 +61,7 @@ export default function Projects() {
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <div className="flex flex-col sm:flex-row justify-between items-center sm:items-stretch w-full gap-3 sm:gap-0 min-h-[480px]">
+        <div className="flex flex-col sm:flex-row justify-between items-center sm:items-stretch w-full gap-3 sm:gap-0 min-h-[480px] sm:min-h-0">
           <div className="relative h-72 w-60 bg-white/10 shrink-0">
             <motion.div
               key={key}

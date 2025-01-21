@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Navbar from "./components/Navbar";
@@ -25,6 +26,7 @@ function App() {
         <Experience />
         <Education />
         <Projects />
+        <Contact />
       </motion.main>
     </>
   );

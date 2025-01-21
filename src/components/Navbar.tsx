@@ -16,9 +16,11 @@ export default function Navbar() {
         <span className="block font-bold font-mono text-2xl sm:hidden">AS</span>
       </a>
       <div className="flex text-white/70">
-        <Button variant="ghost" className="rounded-xl hover:bg-secondary/60">
-          resume
-        </Button>
+        <a href="/files/resume_final.pdf" download="resume">
+          <Button variant="ghost" className="rounded-xl hover:bg-secondary/60">
+            resume
+          </Button>
+        </a>
         <Button
           onClick={() => scrollToSection("experience")}
           variant="ghost"
@@ -26,10 +28,18 @@ export default function Navbar() {
         >
           exp
         </Button>
-        <Button variant="ghost" className="rounded-xl hover:bg-secondary/60">
+        <Button
+          onClick={() => scrollToSection("projects")}
+          variant="ghost"
+          className="rounded-xl hover:bg-secondary/60"
+        >
           projects
         </Button>
-        <Button variant="ghost" className="rounded-xl hover:bg-secondary/60">
+        <Button
+          onClick={() => scrollToSection("contact")}
+          variant="ghost"
+          className="rounded-xl hover:bg-secondary/60"
+        >
           contact
         </Button>
       </div>

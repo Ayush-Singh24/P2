@@ -205,7 +205,8 @@ export const projects: ProjectType[] = [
   },
   {
     title: "Folderize",
-    description: "Folder manager",
+    description:
+      "Folderize is a command-line interface (CLI) tool designed to streamline file organization. It automatically categorizes files into folders based on their extensions.",
     img: "folderize.png",
     githubLink: "https://github.com/ayush-singh24/folderize",
   },
